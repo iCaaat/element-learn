@@ -57,6 +57,10 @@
           <!--主体-->
           <el-main>
             <AppBodyTable></AppBodyTable>
+            <el-divider></el-divider>
+
+
+            <EchartExample />
           </el-main>
 
         </el-container>
@@ -64,6 +68,7 @@
     </div>
   </div>
 </template>
+
 
 <style>
 body {
@@ -109,7 +114,12 @@ body {
 </style>
 
 <script>
+import EchartExample from "@/components/EchartExample.vue";
+
 export default {
+  components: {
+    EchartExample
+  },
   methods: {
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
